@@ -34,6 +34,7 @@ def login2(func):
 def home():
     print("----home----")
 
+# need pass style into inner class, so need pass *args
 @login
 def america(style):
     print("----america----"+style)

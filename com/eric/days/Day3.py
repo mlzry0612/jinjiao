@@ -4,17 +4,18 @@ def setcompart():
     a = {1,2,3,4}
     b = {3,4,5,6}
     difference = a.symmetric_difference(b)
-    print difference
+    print ("symmetric_difference is %s" % difference)
 
     union = a.union(b)
-    print union
+    print ("union is %s" % union)
 
     a_difference = a.difference(b)
-    print a_difference
+    print ("a_difference is %s" % a_difference)
 
     print a & b
     print a | b
     print a - b
+
 
 def printparamers(name, age='30', favriote='HIGHHEEL'):
     print (name, age, favriote)
@@ -22,6 +23,7 @@ def printparamers(name, age='30', favriote='HIGHHEEL'):
 
 def stu_register(name,age,*args):
     print(name,age,args)
+
 
 time = 0
 def midsplit(data, number):

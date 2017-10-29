@@ -34,5 +34,4 @@ if __name__ == '__main__':
     fu.send(None)
     while True:
         print ("main:", fu.send(200))
-
-
+        time.sleep(1)
