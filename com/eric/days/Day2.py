@@ -35,7 +35,11 @@ if __name__ == '__main__':
 
 
     array = ['1','2','3']
-    array.extend(['4','5','6'])
+    array.insert(1,'322')
+    array.append('234')
+    array.append(['3','5'])  #append treat as list as one item
+    array.extend(('2',))
+    array.extend(['4','5','6']) #Extend put all item into  list
     print array.count('4')
     print array.index('3')
     print array.__len__()
