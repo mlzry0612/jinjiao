@@ -1,4 +1,6 @@
+#coding=utf-8
 user_status = False
+
 
 def login(func):
 
@@ -7,6 +9,7 @@ def login(func):
         _password = "123"
         global user_status
 
+        print type
         if user_status == False:
             username = raw_input("user:")
             password = raw_input("pasword:")
@@ -18,7 +21,7 @@ def login(func):
                 print("wrong username or password!")
 
         if user_status == True:
-            func(*args)
+            return func(*args)  #如果这里没有 return 那个这个fun 的 return 是不会返回东西给外面的  id()就为空
 
     return inner  #NO () here
 
@@ -34,10 +37,12 @@ def login2(func):
 def home():
     print("----home----")
 
+
 # need pass style into inner class, so need pass *args
 @login
 def america(style):
     print("----america----"+style)
+    return id(america)
 
 
 def japan():
@@ -52,4 +57,5 @@ def henan():
 
 home()
 
-america("back insert")
+s = america("back insert")
+print s
